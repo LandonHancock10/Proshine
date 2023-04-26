@@ -44,18 +44,22 @@ nav ul li a {
 .hero {
     text-align: center;
     padding: 100px 0;
+    background-image: url(window-cleaning.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
 }
 
 .hero h1 {
     font-size: 36px;
-    color: #fff;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
     font-size: 18px;
-    color: #fff;
     margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .cta-button {
@@ -131,4 +135,8 @@ footer {
     text-align: center;
     color: #fff;
     font-size: 14px;
+}
+
+h2{
+    font-size: 40px;
 }
