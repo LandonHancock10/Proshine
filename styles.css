@@ -1,10 +1,26 @@
-/* styles.css */
-
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+button {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial black;
+}
+
+#about p,
+#services p,
+#contact p {
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 /* Global styles */
@@ -22,8 +38,9 @@ body {
 /* Header */
 header {
     background-color: #333;
-    padding: 20px;
+    padding: 30px;
 }
+
 nav {
     text-align: center;
 }
@@ -73,12 +90,21 @@ nav ul li a:hover:before {
 
 /* Home Section */
 .hero {
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    padding: 100px 0;
-    background-image: url(window-cleaning.jpg);
-    background-size: cover;
-    background-position: center;
+    padding: 250px;
     color: #fff;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero h1 {
@@ -92,6 +118,7 @@ nav ul li a:hover:before {
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
 
 .cta-button {
     display: inline-block;
@@ -183,6 +210,145 @@ footer {
     font-size: 14px;
 }
 
-h2{
+h2 {
     font-size: 40px;
+}
+
+/* ...existing styles... */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 250px;
+    color: #fff;
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.slide.previous {
+    transform: translateX(-100%);
+    z-index: -1;
+}
+
+.slide.next {
+    transform: translateX(100%);
+    z-index: -1;
+}
+
+@keyframes slideshow-animation {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        width: 130%;
+    }
+
+    #welcomeTo {
+        font-size: 80px;
+        position: relative;
+        left: -200px;
+        top: -150px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* Display items vertically */
+        align-items: center;
+        /* Center items horizontally */
+        position: relative;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 50px;
+        /* Add spacing between items */
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        /* Make each item a block-level element */
+        font-size: 50px;
+        width: 100%;
+    }
+
+    header {
+        width: 1w;
+        padding: 0;
+        position: relative;
+    }
+
+    #sub {
+        display: none;
+    }
+
+    #gaq {
+        position: relative;
+        right: 180px;
+        width: 300px;
+        font-size: 56px;
+        top: 30px;
+        border-radius: 40px;
+    }
+
+/* Custom styles for the contact form */
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    height: 100px; /* Adjust the value to increase the height */
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#contact form button {
+    padding: 80px 190px;
+    font-size: 20px;
+    border-radius: 20px; /* Adjust the value to make the button more rounded */
+}
+
+
 }

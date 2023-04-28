@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ProShine Window and Gutter Services</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,11 +21,20 @@
 
     <section id="home">
         <div class="hero">
-            <h1>Welcome to ProShine Window and Gutter Services</h1>
-            <p>Your trusted solution for sparkling windows and clean gutters.</p>
-            <a href="#contact" class="cta-button">Get a Quote</a>
+            <div class="slideshow">
+                <img class="slide active" src="p2.jpg" alt="Slide 1">
+                <img class="slide" src="p1.jpg" alt="Slide 2">
+                <img class="slide" src="p5.jpg" alt="Slide 3">
+                <img class="slide" src="p4.jpg" alt="Slide 4">
+                <img class="slide" src="p3.jpg" alt="Slide 5">
+            </div>
+            <h1 id="welcomeTo">Welcome to ProShine Window and Screen Cleaning</h1>
+            <p id="sub">Your trusted solution for sparkling windows and clean screens.</p>
+            <a href="#contact" id="gaq" class="cta-button">Get a Quote</a>
         </div>
     </section>
+
+
 
     <section id="services">
         <div class="container">
@@ -30,11 +42,28 @@
             <br><br>
             <div class="service">
                 <h3>Window Cleaning</h3>
-                <p>Let us make your windows shine with our professional window cleaning services.</p>
+                <p>Welcome to ProShine, your trusted destination for professional exterior and interior window cleaning
+                    services. We understand the importance of pristine windows in creating a clean and inviting space.
+                    Our skilled team of experts specializes in removing stubborn dirt, grime, and streaks to deliver
+                    exceptional results that enhance the beauty of your home or office. Whether you need thorough
+                    exterior window cleaning to restore the curb appeal of your property or meticulous interior window
+                    cleaning to let in the natural light, we have you covered. Because of our emphasis on detail and
+                    state-of-the-art equipment, we ensure crystal-clear windows that leave a lasting impression. Say
+                    goodbye to smudges and hello to sparkling windows by choosing ProShine. Contact us today to schedule
+                    an appointment and let our professionals transform your windows into a pristine showcase.</p>
             </div>
             <div class="service">
-                <h3>Gutter Cleaning</h3>
-                <p>Ensure the longevity of your gutters with our thorough gutter cleaning and maintenance.</p>
+                <h3>Screen Cleaning</h3>
+                <p>At ProShine, we prioritize the longevity of your screens through our comprehensive screen cleaning
+                    and maintenance services. We understand the importance of preserving the lifespan of your screens,
+                    whether it's for residential or commercial purposes. Our dedicated team specializes in thorough
+                    screen cleaning, removing dust, dirt, and other debris that can accumulate over time. By
+                    implementing our meticulous cleaning techniques and utilizing industry-leading products, we ensure
+                    that your screens are free from any visual distractions and potential damages. Our maintenance
+                    services go beyond cleaning, as we inspect and address any underlying issues or potential risks to
+                    keep your screens in optimal condition. Trust ProShine to provide you with the necessary care and
+                    attention that will extend the lifespan of your screens. Contact us today to schedule a screen
+                    cleaning and maintenance appointment, and let our experts ensure the longevity of your screens.</p>
             </div>
             <!-- Add more service sections as needed -->
         </div>
@@ -43,7 +72,16 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>ProShine Window and Gutter Services is a dedicated team of experts committed to providing top-quality window cleaning and gutter maintenance solutions. With years of experience, we guarantee customer satisfaction and sparkling results.</p>
+            <p>Welcome to Proshine Windows, a dedicated small company committed to delivering excellent window cleaning
+                services. With a focus on exceptional customer service, we take pride in every job we undertake and
+                strive to do it the right way. Our team understands the importance of your time, which is why we
+                prioritize quick turnaround times without compromising the quality of our work. We are confident in the
+                value we provide, which is why we offer a guarantee that our services will meet and exceed your
+                satisfaction. Whether it's residential or commercial window cleaning, we approach each project with
+                meticulous attention to detail, ensuring that your windows are spotless and gleaming. At Proshine
+                Windows, we believe in building long-lasting relationships with our clients, built on trust,
+                reliability, and exceptional results. Experience the difference with our dedicated team and let us bring
+                back the shine to your windows.</p>
         </div>
     </section>
 
@@ -51,19 +89,21 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>Ready to get started? Contact us today for a free quote and schedule your next service.</p>
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
+            <form action="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="number" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Job Details" required></textarea>
                 <button type="submit">Submit</button>
-            </form>
+              </form>
+              
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 ProShine Window and Gutter Services. All rights reserved.</p>
+        <p>&copy; 2023 ProShine Window and Screen Services. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
